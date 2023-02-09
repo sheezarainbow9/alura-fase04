@@ -1,6 +1,7 @@
 <h1>Formação Frontend T4 - One Alura</h1> 
 
-![logoluraone](https://user-images.githubusercontent.com/101677993/217843126-c5c93a75-5e42-4441-ab4d-1fdc7762c5b3.JPG)
+<p align="center>
+![logoluraone](https://user-images.githubusercontent.com/101677993/217843126-c5c93a75-5e42-4441-ab4d-1fdc7762c5b3.JPG)</p>
 
 
 <p align="center">
