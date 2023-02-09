@@ -55,9 +55,31 @@
   margin-left: 0;
 }
 
+.cabecalhoPrincipal-nav-link-app {
+  order: -1;
+}
+
+.videoSobre .container {
+  display: flex;
+}
+
+.videoSobre-sobre {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 2;
+}
+
+.videoSobre-sobre-list {
+  flex-grow: 1;
+}
+
+.videoSobre-video {
+  flex-grow: 1;
+}
+
 /* Parte mobile */
 @media (max-width: 768px) {
-
   .cabecalhoPrincipal-nav {
     flex-direction: column;
   }
