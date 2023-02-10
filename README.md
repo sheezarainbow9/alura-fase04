@@ -27,6 +27,7 @@
 ## Ordem de aulas
 
 :heavy_check_mark: Aula 1: Flexbox - Posicione elementos na tela (foi feito o site Alurinha).
+
 :heavy_check_mark: Aula 2: Layouts Responsivos: Trabalhando com layouts mobile (Projeto Apeperia).
 
 
