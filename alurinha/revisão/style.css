@@ -47,6 +47,7 @@ div:nth-child(8) {
   /* flex-grow: 1; */
   /* flex-basis: 25%;  É o mesmo que width */
   flex: 0 1 200px; 
+ 
 }
 
 .primeiro {
