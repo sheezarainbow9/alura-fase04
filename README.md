@@ -15,7 +15,7 @@
 </p>
 
 
-### Status: em desenvolvimento :warning: <br/>
+### Status: em desenvolvimento :warning: <br>
 
 
 ## Descrição do repositório 
