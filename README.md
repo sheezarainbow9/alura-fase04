@@ -18,7 +18,7 @@
 > Status: em desenvolvimento :warning: 
 
 
-## Descrição do projeto 
+## Descrição do repositório 
 
 <p align="justify">
   Repositório das aulas da Fase 4 da formação frontend da Alura-One.
