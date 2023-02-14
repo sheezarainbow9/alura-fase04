@@ -28,7 +28,7 @@
 
 :heavy_check_mark: Aula 2: Layouts Responsivos: Trabalhando com layouts mobile (Projeto Apeperia).
 
-:heavy_check_mark: Aula 3: Arquitetura CSS: Descomplicando os problemas.
+:heavy_check_mark: Aula 3: Arquitetura CSS: Descomplicando os problemas, onde desenvolveremos o site de receitas Fruta & Fruto.
 
 
 
