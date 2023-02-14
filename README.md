@@ -30,6 +30,8 @@
 
 :heavy_check_mark: Aula 3: Arquitetura CSS: Descomplicando os problemas, onde desenvolveremos o site de receitas Fruta & Fruto.
 
+:heavy_check_mark: Aula 4: JavaScript: Explorando a linguagem.
+
 
 
 
