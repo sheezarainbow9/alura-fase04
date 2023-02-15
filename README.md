@@ -32,6 +32,11 @@
 
 :heavy_check_mark: Aula 4: JavaScript: Explorando a linguagem.
 
+:heavy_check_mark: Aula 5: JavaScript na Web: Manipule o DOM com JavaScript.
+
+
+
+
 
 
 
