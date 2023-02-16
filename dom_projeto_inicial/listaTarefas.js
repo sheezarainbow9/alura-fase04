@@ -11,6 +11,7 @@ const criarTarefa = (evento) => {
 
   tarefa.innerHTML = conteudo;
 
+  tarefa.appendChild(botaoConcluir());
   lista.appendChild(tarefa); // anexa elemento dentro do outro (data-list vai receber a li criada).
   input.value = "";
 };
@@ -18,3 +19,24 @@ const criarTarefa = (evento) => {
 const novaTarefa = document.querySelector("[data-form-button]");
 
 novaTarefa.addEventListener("click", criarTarefa);
+
+// botão concluir
+
+const botaoConcluir = () => {
+  const botaoConcluir = document.createElement("button");
+
+  botaoConcluir.classList.add("check-button");
+  botaoConcluir.innerText = "concluir";
+
+  botaoConcluir.addEventListener("click", concluirTarefa);
+
+  return botaoConcluir;
+};
+
+const concluirTarefa = (evento) => {
+  const botaoConcluir = evento.target;
+
+  const tarefaCompleta = botaoConcluir.parentElement; // pega o pai do elemento (botão), que no caso é o 'li'.
+
+  tarefaCompleta.classList.toggle("done"); // vai passar o elemento css('done') responsável pela tarefa de rabiscar item na lista.
+};
