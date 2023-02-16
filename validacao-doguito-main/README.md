@@ -1,11 +1,9 @@
-# JS DOM
+# VALIDAÇÃO DE FORMS
 
 # Nesta aula, aprendemos:
 
-# Adicionar classe CSS utilizando o método toggle
-# Utilizar o atributo parentElement para subir um elemento na árvore do DOM
-# Encontrar o alvo do evento utilizando a propriedade target
-# Utilizar IIFE
-# Utilizar import/export
-# Remover elementos do DOM com o método remove
-# Entender Same Origin Police e CORS
+# Fazer validações no próprio HTML utilizando os atributos required e type.
+
+# Usar regras de regex dentro do atributo pattern para validar o campo de senha.
+
+# Mandar uma mensagem customizada de erro no balão do navegador.
