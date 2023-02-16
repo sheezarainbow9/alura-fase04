@@ -32,7 +32,11 @@
 
 :heavy_check_mark: Aula 4: JavaScript: Explorando a linguagem.
 
-:heavy_check_mark: Aula 5: JavaScript na Web: Manipule o DOM com JavaScript.
+:heavy_check_mark: Aula 5: JavaScript na Web: Manipule o DOM com JavaScript,com criação do CEEP, app para lista de compras.
+
+:heavy_check_mark: Aula 6: JavaScript na Web: Validação de Formulários e HTML5.
+
+
 
 
 
