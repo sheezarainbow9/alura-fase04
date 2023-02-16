@@ -6,8 +6,9 @@ export function valida(input) {
   }
 
   const validadores = {
-    dataNascimento: (input) => validaDataNascimento(input),
-    cpf: (input) => validaCPF(input),
+    dataNascimento:input => validaDataNascimento(input),
+    cpf:input => validaCPF(input),
+    cep:input => recuperarCEP(input),
   };
 
   if (input.validity.valid) {
