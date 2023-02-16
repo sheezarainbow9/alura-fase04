@@ -1,42 +1,46 @@
-const criarTarefa = (evento) => {
-  evento.preventDefault(); // previne o formulário de enviar os dados, parando o refresh na página.
+// “IIFE” -( () => { funções })(), ou Immediately Invoked Function Expression ou “Função de Invocação Imediata”, para garantir que usuários não acessem, somente utilizem as regras do negócio.
 
-  const lista = document.querySelector("[data-list]");
-  const input = document.querySelector("[data-form-input]");
-  const valor = input.value;
+(() => {
+  const criarTarefa = (evento) => {
+    evento.preventDefault(); // previne o formulário de enviar os dados, parando o refresh na página.
 
-  const tarefa = document.createElement("li");
-  tarefa.classList.add("task"); // adicionará a classe task existente no css para visualizarmos a lista de items.
-  const conteudo = `<p class="content">${valor}</p>`;
+    const lista = document.querySelector("[data-list]");
+    const input = document.querySelector("[data-form-input]");
+    const valor = input.value;
 
-  tarefa.innerHTML = conteudo;
+    const tarefa = document.createElement("li");
+    tarefa.classList.add("task"); // adicionará a classe task existente no css para visualizarmos a lista de items.
+    const conteudo = `<p class="content">${valor}</p>`;
 
-  tarefa.appendChild(botaoConcluir());
-  lista.appendChild(tarefa); // anexa elemento dentro do outro (data-list vai receber a li criada).
-  input.value = "";
-};
+    tarefa.innerHTML = conteudo;
 
-const novaTarefa = document.querySelector("[data-form-button]");
+    tarefa.appendChild(botaoConcluir());
+    lista.appendChild(tarefa); // anexa elemento dentro do outro (data-list vai receber a li criada).
+    input.value = "";
+  };
 
-novaTarefa.addEventListener("click", criarTarefa);
+  const novaTarefa = document.querySelector("[data-form-button]");
 
-// botão concluir
+  novaTarefa.addEventListener("click", criarTarefa);
 
-const botaoConcluir = () => {
-  const botaoConcluir = document.createElement("button");
+  // botão concluir
 
-  botaoConcluir.classList.add("check-button");
-  botaoConcluir.innerText = "concluir";
+  const botaoConcluir = () => {
+    const botaoConcluir = document.createElement("button");
 
-  botaoConcluir.addEventListener("click", concluirTarefa);
+    botaoConcluir.classList.add("check-button");
+    botaoConcluir.innerText = "concluir";
 
-  return botaoConcluir;
-};
+    botaoConcluir.addEventListener("click", concluirTarefa);
 
-const concluirTarefa = (evento) => {
-  const botaoConcluir = evento.target;
+    return botaoConcluir;
+  };
 
-  const tarefaCompleta = botaoConcluir.parentElement; // pega o pai do elemento (botão), que no caso é o 'li'.
+  const concluirTarefa = (evento) => {
+    const botaoConcluir = evento.target;
 
-  tarefaCompleta.classList.toggle("done"); // vai passar o elemento css('done') responsável pela tarefa de rabiscar item na lista.
-};
+    const tarefaCompleta = botaoConcluir.parentElement; // pega o pai do elemento (botão), que no caso é o 'li'.
+
+    tarefaCompleta.classList.toggle("done"); // vai passar o elemento css('done') responsável pela tarefa de rabiscar item na lista.
+  };
+})();
