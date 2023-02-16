@@ -6,9 +6,9 @@ export function valida(input) {
   }
 
   const validadores = {
-    dataNascimento:input => validaDataNascimento(input),
-    cpf:input => validaCPF(input),
-    cep:input => recuperarCEP(input),
+    dataNascimento: (input) => validaDataNascimento(input),
+    cpf: (input) => validaCPF(input),
+    cep: (input) => recuperarCEP(input),
   };
 
   if (input.validity.valid) {
@@ -111,7 +111,7 @@ function checaCPFRepetido(cpf) {
   ];
   let cpfValido = true;
 
-  valoresRepetidos.forEach(valor => {
+  valoresRepetidos.forEach((valor) => {
     if (valor == cpf) {
       cpfValido = false;
     }
