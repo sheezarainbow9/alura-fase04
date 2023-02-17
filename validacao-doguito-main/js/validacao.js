@@ -16,8 +16,7 @@ export function valida(input) {
     input.parentElement.querySelector(".input-mensagem-erro").innerHTML = "";
   } else {
     input.parentElement.classList.add("input-container--invalido");
-    input.parentElement.querySelector(".input-mensagem-erro").innerHTML =
-      mostraMsgErro(input, tipoInput);
+    input.parentElement.querySelector(".input-mensagem-erro").innerHTML = mostraMsgErro(input, tipoInput);
   }
 }
 
@@ -62,6 +61,12 @@ function mostraMsgErro(tipoInput, input) {
   return mensagem;
 }
 
+const dataNascimento = document.querySelector('#nascimento');
+
+dataNascimento.addEventListener('blur', (evento) =>{
+  validaDataNascimento(evento.target);
+})
+
 function validaDataNascimento(input) {
   const dataRecebida = new Date(input.value);
   let mensagem = "";
@@ -89,7 +94,7 @@ function validaCPF(input) {
   const cpfFormatado = input.value.replace(/\D/g, "");
   let mensagem = "";
 
-  if (!checaCPFRepetido(cpfFormatado)) {
+  if (!checaCPFRepetido(cpfFormatado) || !checaEstruturaCPF(cpfFormatado)) {
     mensagem = "O CPF digitado não é válido.";
   }
 
@@ -119,3 +124,33 @@ function checaCPFRepetido(cpf) {
 
   return cpfValido;
 }
+
+function checaEstruturaCPF (cpf) {
+  const multiplicador = 10;
+
+  return checaDigitoVerificador(cpf, multiplicador)
+}
+
+function checaDigitoVerificador(cpf, multiplicador) {
+  if (multiplicador >= 12) {
+    return true;
+  }
+  let multiplicadorInicial = multiplicador; // para não sobrescrever o multiplicador.
+  let soma = 0;
+  const cpfSemDigitos = cpf.substr(0, multiplicador - 1).split('');  // verifica as posições dos caracteres.
+  const digitoVerificador = cpf.charAt(multiplicador - 1) // checar o caractere na posição específica.
+  for (let contador = 0; multiplicadorInicial > 1; multiplicadorInicial--) {
+    soma = soma + cpfSemDigitos[contador] * multiplicadorInicial;
+    contador++
+  }
+
+  if (digitoVerificador == confirmaDigito(soma)) {
+    return checaDigitoVerificador(cpf, multiplicador + 1);
+  }
+  return false;
+}
+
+function confirmaDigito(soma) {
+  return 11 - (soma%11)
+}
+
