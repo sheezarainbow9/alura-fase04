@@ -2,7 +2,7 @@
 
 # Nesta aula, aprendemos:
 
-# Fazer validações no próprio HTML utilizando os atributos required e type.
+Fazer validações no próprio HTML utilizando os atributos required e type.
 
 # Usar regras de regex dentro do atributo pattern para validar o campo de senha.
 
