@@ -8,33 +8,33 @@ Usar regras de regex dentro do atributo pattern para validar o campo de senha.
 
 Mandar uma mensagem customizada de erro no balão do navegador.
 
-Criar funções para validações customizadas do formulário
+Criar funções para validações customizadas do formulário.
 
-Definir mensagens customizadas para validações fora do HTML
+Definir mensagens customizadas para validações fora do HTML.
 
-Utilizar data attributes para trabalhar com JavaScript
+Utilizar data attributes para trabalhar com JavaScript.
 
-Deixar a função de validação mais genérica para funcionar com qualquer input
+Deixar a função de validação mais genérica para funcionar com qualquer input.
 
-A instalar e usar o plugin Liveserver
+A instalar e usar o plugin Liveserver.
 
-Como baixar e rodar o browser-sync
+Como baixar e rodar o browser-sync.
 
-Como mostrar a mensagem de erro diretamente no HTML
+Como mostrar a mensagem de erro diretamente no HTML.
 
-Como customizar as mensagens de erro de validação
+Como customizar as mensagens de erro de validação.
 
-A validar cpf com números repetidos
+A validar cpf com números repetidos.
 
-A matemática por trás da validação de um CPF
+A matemática por trás da validação de um CPF.
 
-Recursão de função
+Recursão de função.
 
-Outra estrutura de regex para a pré validação do CEP
+Outra estrutura de regex para a pré validação do CEP.
 
-Como fazer uma requisição para a API da ViaCEP
+Como fazer uma requisição para a API da ViaCEP.
 
-Preencher outros campos do formulário com a resposta da API da ViaCEP
+Preencher outros campos do formulário com a resposta da API da ViaCEP.
 
 Como adicionar máscara monetária para o campo de preço.
 
