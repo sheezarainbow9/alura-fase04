@@ -36,3 +36,5 @@
 
 # Preencher outros campos do formulário com a resposta da API da ViaCEP
 
+# Como adicionar máscara monetária para o campo de preço.
+

@@ -66,6 +66,9 @@ const mensagemErro = {
     valueMissing: "O campo estado não pode estar vazio.",
     customError: "O estado digitado não é válido.",
   },
+  preco: {
+    valueMissing: "O campo de preço não pode estar vazio.",
+  },
 };
 
 function mostraMsgErro(tipoInput, input) {
@@ -193,7 +196,7 @@ function recuperarCEP(input) {
         }
         input.setCustomValidity("");
         preencheCamposComCEP(data);
-        return
+        return;
       });
   }
 }
@@ -206,5 +209,4 @@ function preencheCamposComCEP(data) {
   logradouro.value = data.logradouro;
   cidade.value = data.localidade;
   estado.value = data.uf;
-
 }
