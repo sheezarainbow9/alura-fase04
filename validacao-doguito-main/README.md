@@ -30,3 +30,9 @@
 
 # Recursão de função
 
+# Outra estrutura de regex para a pré validação do CEP
+
+# Como fazer uma requisição para a API da ViaCEP
+
+# Preencher outros campos do formulário com a resposta da API da ViaCEP
+

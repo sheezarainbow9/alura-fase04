@@ -16,7 +16,8 @@ export function valida(input) {
     input.parentElement.querySelector(".input-mensagem-erro").innerHTML = "";
   } else {
     input.parentElement.classList.add("input-container--invalido");
-    input.parentElement.querySelector(".input-mensagem-erro").innerHTML = mostraMsgErro(input, tipoInput);
+    input.parentElement.querySelector(".input-mensagem-erro").innerHTML =
+      mostraMsgErro(input, tipoInput);
   }
 }
 
@@ -48,6 +49,23 @@ const mensagemErro = {
     valueMissing: "O campo CPF não pode estar vazio.",
     customError: "O CPF digitado não é válido.",
   },
+  cep: {
+    valueMissing: "O campo CEP não pode estar vazio.",
+    patternMismatch: "Não foi possível buscar o CEP.",
+    customError: "O CEP digitado não é válido.",
+  },
+  logradouro: {
+    valueMissing: "O campo logradouro não pode estar vazio.",
+    customError: "O logradouro digitado não é válido.",
+  },
+  cidade: {
+    valueMissing: "O campo cidade não pode estar vazio.",
+    customError: "A cidade digitada não é válida.",
+  },
+  estado: {
+    valueMissing: "O campo estado não pode estar vazio.",
+    customError: "O estado digitado não é válido.",
+  },
 };
 
 function mostraMsgErro(tipoInput, input) {
@@ -61,11 +79,11 @@ function mostraMsgErro(tipoInput, input) {
   return mensagem;
 }
 
-const dataNascimento = document.querySelector('#nascimento');
+const dataNascimento = document.querySelector("#nascimento");
 
-dataNascimento.addEventListener('blur', (evento) =>{
+dataNascimento.addEventListener("blur", (evento) => {
   validaDataNascimento(evento.target);
-})
+});
 
 function validaDataNascimento(input) {
   const dataRecebida = new Date(input.value);
@@ -125,10 +143,10 @@ function checaCPFRepetido(cpf) {
   return cpfValido;
 }
 
-function checaEstruturaCPF (cpf) {
+function checaEstruturaCPF(cpf) {
   const multiplicador = 10;
 
-  return checaDigitoVerificador(cpf, multiplicador)
+  return checaDigitoVerificador(cpf, multiplicador);
 }
 
 function checaDigitoVerificador(cpf, multiplicador) {
@@ -137,11 +155,11 @@ function checaDigitoVerificador(cpf, multiplicador) {
   }
   let multiplicadorInicial = multiplicador; // para não sobrescrever o multiplicador.
   let soma = 0;
-  const cpfSemDigitos = cpf.substr(0, multiplicador - 1).split('');  // verifica as posições dos caracteres.
-  const digitoVerificador = cpf.charAt(multiplicador - 1) // checar o caractere na posição específica.
+  const cpfSemDigitos = cpf.substr(0, multiplicador - 1).split(""); // verifica as posições dos caracteres.
+  const digitoVerificador = cpf.charAt(multiplicador - 1); // checar o caractere na posição específica.
   for (let contador = 0; multiplicadorInicial > 1; multiplicadorInicial--) {
     soma = soma + cpfSemDigitos[contador] * multiplicadorInicial;
-    contador++
+    contador++;
   }
 
   if (digitoVerificador == confirmaDigito(soma)) {
@@ -151,6 +169,42 @@ function checaDigitoVerificador(cpf, multiplicador) {
 }
 
 function confirmaDigito(soma) {
-  return 11 - (soma%11)
+  return 11 - (soma % 11);
 }
 
+function recuperarCEP(input) {
+  const cep = input.value.replace(/\D/g, "");
+  const url = `https://viacep.com.br/ws/${cep}/json/`;
+  const options = {
+    method: "GET",
+    mode: "cors",
+    headers: {
+      "content-type": "application/json;charset-utf-8",
+    },
+  };
+
+  if (!input.validity.patternMismatch && !input.validity.valueMissing) {
+    fetch(url, options)
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.erro) {
+          input.setCustomValidity("Não foi possível buscar o CEP.");
+          return;
+        }
+        input.setCustomValidity("");
+        preencheCamposComCEP(data);
+        return
+      });
+  }
+}
+
+function preencheCamposComCEP(data) {
+  const logradouro = document.querySelector('[data-tipo="logradouro"]');
+  const cidade = document.querySelector('[data-tipo="cidade"]');
+  const estado = document.querySelector('[data-tipo="estado"]');
+
+  logradouro.value = data.logradouro;
+  cidade.value = data.localidade;
+  estado.value = data.uf;
+
+}
