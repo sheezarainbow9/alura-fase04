@@ -34,7 +34,7 @@
 
 :heavy_check_mark: Aula 5: JavaScript na Web: Manipule o DOM com JavaScript, com desenvolvimento do CEEP, app para lista de compras.
 
-:heavy_check_mark: Aula 6: JavaScript na Web: Validação de Formulários e HTML5.
+:heavy_check_mark: Aula 6: JavaScript na Web: Validação de Formulários e HTML5, desenvolvido numa página de cadastro (Doguito Petshop).
 
 
 
