@@ -37,7 +37,7 @@
 
 :heavy_check_mark: Aula 6: JavaScript na Web: Validação de Formulários e HTML5, desenvolvido numa página de cadastro (Doguito Petshop).
 
-:heavy_check_mark: Aula 7: JavaScript: Introdução a Orientação a Objetos.
+:heavy_check_mark: Aula 7: JavaScript: Interfaces e Herança em Orientação à Objetos.
 
 
 
