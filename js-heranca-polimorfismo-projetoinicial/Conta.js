@@ -1,4 +1,4 @@
-export class ContaPoupanca {
+export class Conta {
   constructor(saldoInicial, cliente, agencia) {
     this._saldo = saldoInicial;
     this._cliente = cliente;
@@ -6,6 +6,7 @@ export class ContaPoupanca {
   }
 
   sacar(valor) {
+    taxa = 1.1 * valor;
     if (this._saldo >= valor) {
       this._saldo -= valor;
       return valor;
