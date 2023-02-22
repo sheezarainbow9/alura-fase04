@@ -1,7 +1,7 @@
 import { Cliente } from "./Cliente.js";
 
 export class ContaCorrente {
-  static numeroDeContas = 0;
+  static numeroDeContas = 0;  // referencia todas as classes deste jeito.
   agencia;
   _cliente;
   // referenciar o cliente que foi privado, atribuindo o valor correto:
