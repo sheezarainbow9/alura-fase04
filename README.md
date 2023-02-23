@@ -42,7 +42,7 @@
 
 :heavy_check_mark: Aula 8: JavaScript: Interfaces e Herança em Orientação à Objetos.
 
-:heavy_check_mark: Aula 9: JS na web: CRUD com JavaScript assíncrono.
+:heavy_check_mark: Aula 9: JS na web: CRUD com JavaScript assíncrono, desenvolvido numa página de cadastro (Doguito Petshop).
 
 
 
