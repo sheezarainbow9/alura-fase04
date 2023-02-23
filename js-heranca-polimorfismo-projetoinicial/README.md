@@ -47,3 +47,13 @@ Polimorfismo.
 Métodos estáticos.
 
 Maneiras de tratar objetos de diferentes tipos de maneira parecida.
+
+Operador in.
+
+Operador instanceOf.
+
+Como proteger nossos sistemas.
+
+Interfaces padronizadas.
+
+Ducky Type.
