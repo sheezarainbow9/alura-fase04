@@ -18,14 +18,20 @@ export class Conta {
   get saldo() {
     return this._saldo;
   }
-
+  // boas práticas para não ter código repetido
   sacar(valor) {
     let taxa = 1;
+    return this._sacar(valor, taxa);
+  }
+  // boas práticas para não ter código repetido
+  _sacar(valor, taxa) {
     const valorSacado = taxa * valor;
     if (this._saldo >= valorSacado) {
       this._saldo -= valorSacado;
       return valorSacado;
     }
+
+    return 0;
   }
 
   depositar(valor) {
