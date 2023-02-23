@@ -39,3 +39,11 @@ Classes abstratas.
 Métodos abstratos.
 
 Erros em tempo de execução.
+
+Revisão de herança, boas práticas de código e encapsulamento.
+
+Polimorfismo.
+
+Métodos estáticos.
+
+Maneiras de tratar objetos de diferentes tipos de maneira parecida.
