@@ -27,3 +27,15 @@ Evitando código muito complicado através da herança.
 Palavra-chave Super.
 
 Método e propriedades privadas e protegidas.
+
+Como o JS sabe quem está sendo instanciado.
+
+Pensando na proteção do nosso sistema.
+
+Lançando erros para o sistema.
+
+Classes abstratas.
+
+Métodos abstratos.
+
+Erros em tempo de execução.
