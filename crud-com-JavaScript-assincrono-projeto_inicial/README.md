@@ -25,3 +25,9 @@ Criar um cliente utilizando o verbo http POST.
 Remover um elemento do dom com método remove().
 
 Deletar um cliente utilizando o verbo http DELETE.
+
+Fazer uma query string utilizando a propriedade searchParams.get() para encontrar um id.
+
+Criar uma IIFE ou função auto executável.
+
+Editar os dados utilizando o verbo http PUT.
