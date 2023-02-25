@@ -31,3 +31,7 @@ Fazer uma query string utilizando a propriedade searchParams.get() para encontra
 Criar uma IIFE ou função auto executável.
 
 Editar os dados utilizando o verbo http PUT.
+
+Utilizar async/await para indicar funções assíncronas.
+
+Tratar erros com try/catch.
