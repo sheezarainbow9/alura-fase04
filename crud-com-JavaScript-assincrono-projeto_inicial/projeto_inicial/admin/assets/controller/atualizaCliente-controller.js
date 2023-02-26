@@ -1,6 +1,6 @@
 import { clienteService } from "../../service/cliente-service.js";
 
-async () => {
+(async () => {
   const pegaURL = new URL(window.location);
 
   const id = pegaURL.searchParams.get("id");
@@ -32,4 +32,4 @@ async () => {
       window.location.href = "../telas/erro.html";
     }
   });
-};
+});
