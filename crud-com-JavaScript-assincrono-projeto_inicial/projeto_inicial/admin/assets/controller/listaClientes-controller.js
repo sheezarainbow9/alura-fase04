@@ -1,4 +1,4 @@
-import { clienteService } from '../../service/cliente-service.js'
+import { clienteService } from "../../service/cliente-service.js";
 
 const criaNovaLinha = (nome, email, id) => {
   const linhaNovoCliente = document.createElement("tr");
@@ -36,7 +36,7 @@ tabela.addEventListener("click", async (evento) => {
 
 const render = async () => {
   try {
-    const listaClientes = await listaClientes.listaClientes();
+    const listaClientes = await clienteService.listaClientes();
 
     listaClientes.forEach((elemento) => {
       tabela.appendChild(
